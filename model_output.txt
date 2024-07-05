@@ -1,0 +1,8 @@
+finalgold_visit
+ 0                 238
+ 2                  94
+-1                  82
+ 1                  59
+ 3                  18
+ 4                   3
+Name: count, dtype: int64

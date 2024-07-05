@@ -6,7 +6,7 @@ from sklearn.metrics import classification_report
 from sklearn.model_selection import GridSearchCV
 from sklearn.ensemble import RandomForestClassifier
 
-sys.stdout = open('C:/Users/ramosv/Desktop/NetCo/BioInformedSubjectRepresentation/model_output.txt', 'w')
+#sys.stdout = open('C:/Users/ramosv/Desktop/NetCo/BioInformedSubjectRepresentation/model_output.txt', 'w')
 
 CurrentSmokers_Networks = [
     "CurrentSmokersNetwork1-98",
@@ -35,17 +35,26 @@ for network, cols in network_columns.items():
     cols.remove('Unnamed: 0')
     current_network_dfs[network] = current_smokers_omics[cols]
 
-# Now we have a dictionary(network_dfs) with all the networks as keys and a dataframe with the columns from the omics data set
+# Now we have a dictionary(current_network_dfs) with all the networks as keys and a dataframe with the columns from the omics data set
+
+# Target class stored in the gold csv file which is a single column
+target_class = pd.read_csv(f"{path}current_smokers_gold.csv")
+
+for index, row in target_class.iterrows():
+    if row["finalgold_visit"] == 1 or row["finalgold_visit"] == 2:
+        target_class.loc[index, "finalgold_visit"] = 1
+    elif row["finalgold_visit"] == 3 or row["finalgold_visit"] == 4:
+        target_class.loc[index, "finalgold_visit"] = 2
+
+
+y = target_class['finalgold_visit'].values
 
 # Grid Search: parameter tunning for logistic regression
 param_grid_reg = {'C': [0.1, 1, 10, 100], 'solver': ['liblinear', 'saga']}
 
 # Grid Search: parameter tunning for random forest
-param_grid_rf = {'n_estimators': [100, 200, 300], 'max_depth': [None, 10, 20], 'min_samples_split': [2, 5], 'min_samples_leaf': [1, 2]}
+param_grid_rf = {'n_estimators': [100, 200, 300], 'max_depth': [None, 10, 20], 'min_samples_split': [2, 5], 'min_samples_leaf': [1, 2],'bootstrap': [True, False]}
 
-# Target class stored in the gold csv file which is a single column
-target_class = pd.read_csv(f"{path}current_smokers_gold.csv")
-y = target_class['finalgold_visit'].values
 
 for network, data in current_network_dfs.items():
     X = data.values
@@ -112,6 +121,13 @@ param_grid_rf = {'n_estimators': [100, 200, 300], 'max_depth': [None, 10, 20], '
 
 # Target class stored in the gold csv file which is a single column
 former_smokers_target = pd.read_csv(f"{former_path}{"former_smokers_gold.csv"}")
+
+for index, row in former_smokers_target.iterrows():
+    if row["finalgold_visit"] == 1 or row["finalgold_visit"] == 2:
+        target_class.loc[index, "finalgold_visit"] = 1
+    elif row["finalgold_visit"] == 3 or row["finalgold_visit"] == 4:
+        target_class.loc[index, "finalgold_visit"] = 2
+
 y = former_smokers_target['finalgold_visit'].values
 
 for network, data in former_networks_dfs.items():
@@ -140,4 +156,4 @@ for network, data in former_networks_dfs.items():
     print(report2)
     #print("Best Parameters:", grid_search_rf.best_params_)
 
-sys.stdout.close()
+#sys.stdout.close()
