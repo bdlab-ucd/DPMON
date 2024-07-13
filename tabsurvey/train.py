@@ -88,7 +88,7 @@ def cross_validation(model, X, y, args, save_model=False):
         print("Inference time:", test_timer.get_average_time())
 
         # Save all statistics to a JSON file
-        save_results_to_json(args, sc.get_results(), train_timer.get_average_time(), test_timer.get_average_time())
+        save_results_to_json(args, sc.get_results(), train_timer.get_average_time(), test_timer.get_average_time(), model.params)
 
         # Save the all statistics to a file
         save_results_to_file(args, sc.get_results(),
@@ -140,7 +140,6 @@ def main(args):
     params_file = f"best_params_{args.model_name}_{args.dataset}.json"  
     optuna.logging.get_logger("optuna").addHandler(logging.StreamHandler(sys.stdout))
 
-    # Determine the number of iterations based on the network name prefix
     if args.dataset.startswith("Current"):
         num_iterations = 1000
     elif args.dataset.startswith("Former"):
