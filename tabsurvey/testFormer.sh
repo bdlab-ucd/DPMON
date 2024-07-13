@@ -1,7 +1,10 @@
 #!/bin/bash
 
-N_TRIALS=2
+#I will first use 10 trials to find the best possible parameters
+N_TRIALS=10
 EPOCHS=10
+# For former smoker we do 500 iterations 
+N_RUNS=500
 
 # Models and configurations
 declare -A MODELS

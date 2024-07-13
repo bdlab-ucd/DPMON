@@ -1,5 +1,6 @@
 import logging
 import sys
+import json
 
 import optuna
 
@@ -12,6 +13,27 @@ from utils.parser import get_parser, get_given_parameters_parser
 
 from sklearn.model_selection import KFold, StratifiedKFold  # , train_test_split
 
+def save_results_to_json(args, results, train_time, inference_time, model_params):
+    file_path = f"results_{args.model_name}_{args.dataset}.json"
+    
+    # Create a dictionary of all the important data to save
+    data = {
+        "results": results,
+        "train_time": train_time,
+        "inference_time": inference_time,
+        "model_params": model_params
+    }
+    
+    # Load existing data, update it, and save it back
+    try:
+        with open(file_path, 'r+') as file:  # Open the file in read/write mode
+            file_data = json.load(file)       # Load existing data
+            file_data.append(data)            # Append new data
+            file.seek(0)                      # Move to the start of the file
+            json.dump(file_data, file, indent=4)
+    except FileNotFoundError:
+        with open(file_path, 'w') as file:  # If file does not exist, create it and write the data
+            json.dump([data], file, indent=4)  # Save as a list of results
 
 def cross_validation(model, X, y, args, save_model=False):
     # Record some statistics and metrics
@@ -26,6 +48,7 @@ def cross_validation(model, X, y, args, save_model=False):
     else:
         raise NotImplementedError("Objective" + args.objective + "is not yet implemented.")
 
+    
     for i, (train_index, test_index) in enumerate(kf.split(X, y)):
 
         X_train, X_test = X[train_index], X[test_index]
@@ -63,6 +86,9 @@ def cross_validation(model, X, y, args, save_model=False):
         print("Results:", sc.get_results())
         print("Train time:", train_timer.get_average_time())
         print("Inference time:", test_timer.get_average_time())
+
+        # Save all statistics to a JSON file
+        save_results_to_json(args, sc.get_results(), train_timer.get_average_time(), test_timer.get_average_time())
 
         # Save the all statistics to a file
         save_results_to_file(args, sc.get_results(),
@@ -103,29 +129,63 @@ def main(args):
     print("Start hyperparameter optimization")
     X, y = load_data(args)
         
-    print(f"X type: {type(X)}")
-    print(f"y type: {type(y)}")
-    print(f"X shape: {X.shape}")
-    print(f"y shape: {y.shape}")
-    print(f"X value for data: {X}")
-    print(f"y value for data: {y}")
+    # print(f"X type: {type(X)}")
+    # print(f"y type: {type(y)}")
+    # print(f"X shape: {X.shape}")
+    # print(f"y shape: {y.shape}")
+    # print(f"X value for data: {X}")
+    # print(f"y value for data: {y}")
 
     model_name = str2model(args.model_name)
-
+    params_file = f"best_params_{args.model_name}_{args.dataset}.json"  
     optuna.logging.get_logger("optuna").addHandler(logging.StreamHandler(sys.stdout))
-    study_name = args.model_name + "_" + args.dataset
-    storage_name = "sqlite:///{}.db".format(study_name)
 
-    study = optuna.create_study(direction=args.direction,
-                                study_name=study_name,
-                                storage=storage_name,
-                                load_if_exists=True)
-    study.optimize(Objective(args, model_name, X, y), n_trials=args.n_trials)
-    print("Best parameters:", study.best_trial.params)
+    # Determine the number of iterations based on the network name prefix
+    if args.dataset.startswith("Current"):
+        num_iterations = 1000
+    elif args.dataset.startswith("Former"):
+        num_iterations = 500
+    else:
+        num_iterations = 500
 
-    # Run best trial again and save it!
-    model = model_name(study.best_trial.params, args)
-    cross_validation(model, X, y, args, save_model=True)
+    try:
+        with open(params_file, 'r') as file:
+            best_params = json.load(file)
+
+    except FileNotFoundError:
+        study_name = args.model_name + "_" + args.dataset
+        storage_name = "sqlite:///{}.db".format(study_name)
+
+        study = optuna.create_study(direction=args.direction,
+                                    study_name=study_name,
+                                    storage=storage_name,
+                                    load_if_exists=True)
+        study.optimize(Objective(args, model_name, X, y), n_trials=args.n_trials)
+        best_params = study.best_trial.params
+
+        with open(params_file, 'w') as file:
+            json.dump(best_params, file)
+
+    print("Best parameters:", best_params)
+
+    for _ in range(num_iterations):
+        model = model_name(best_params, args)
+        cross_validation(model, X, y, args, save_model=True)
+
+
+    # study_name = args.model_name + "_" + args.dataset
+    # storage_name = "sqlite:///{}.db".format(study_name)
+
+    # study = optuna.create_study(direction=args.direction,
+    #                             study_name=study_name,
+    #                             storage=storage_name,
+    #                             load_if_exists=True)
+    # study.optimize(Objective(args, model_name, X, y), n_trials=args.n_trials)
+    # print("Best parameters:", study.best_trial.params)
+
+    # # Run best trial again and save it!
+    # model = model_name(study.best_trial.params, args)
+    # cross_validation(model, X, y, args, save_model=True)
 
 
 def main_once(args):
