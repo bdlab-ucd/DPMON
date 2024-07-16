@@ -1,14 +1,14 @@
 #!/bin/bash
 
 #I will first use 10 trials to find the best possible parameters
-N_TRIALS=100
-EPOCHS=10
+N_TRIALS=5
+EPOCHS=5
 
 # Models and configurations
 declare -A MODELS
 MODELS=( 
          ["SAINT"]="torch"
-         ["TabTransformer"]="torch"
+         #["TabTransformer"]="torch"
           )
 
 CONFIGS=( "config/former.yml" )

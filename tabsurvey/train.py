@@ -14,7 +14,7 @@ from utils.parser import get_parser, get_given_parameters_parser
 from sklearn.model_selection import KFold, StratifiedKFold  # , train_test_split
 
 def save_results_to_json(args, results, train_time, inference_time, model_params):
-    file_path = f"results_{args.model_name}_{args.dataset}.json"
+    file_path = f"results2_{args.model_name}_{args.dataset}.json"
     
     # Create a dictionary of all the important data to save
     data = {
@@ -137,7 +137,7 @@ def main(args):
     # print(f"y value for data: {y}")
 
     model_name = str2model(args.model_name)
-    params_file = f"best_params_{args.model_name}_{args.dataset}.json"  
+    params_file = f"best_params2_{args.model_name}_{args.dataset}.json"  
     optuna.logging.get_logger("optuna").addHandler(logging.StreamHandler(sys.stdout))
 
     if args.dataset.startswith("Current"):
