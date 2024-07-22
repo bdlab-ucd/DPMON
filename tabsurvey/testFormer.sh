@@ -1,24 +1,24 @@
 #!/bin/bash
 
 #I will first use 10 trials to find the best possible parameters
-N_TRIALS=5
-EPOCHS=5
+N_TRIALS=100
+EPOCHS=10
 
 # Models and configurations
 declare -A MODELS
 MODELS=( 
-         ["SAINT"]="torch"
-         #["TabTransformer"]="torch"
+         #["SAINT"]="torch"
+         ["TabTransformer"]="torch"
           )
 
 CONFIGS=( "config/former.yml" )
 
 # Network configurations
 FormerSmokers_Networks=(
-    "FormerSmokersNetwork1-88"
+    #"FormerSmokersNetwork1-88"
     "FormerSmokersNetwork2-16"
-    "FormerSmokersNetwork3-24"
-    "FormerSmokersNetwork4-24"
+    #"FormerSmokersNetwork3-24"
+    #"FormerSmokersNetwork4-24"
 )
 
 # Loop through each configuration, model, and network
@@ -33,7 +33,7 @@ for config in "${CONFIGS[@]}"; do
 
             # Loop only executes this line 8 times!
             # 1 for the CONFIG file, 2 for the Models (SAINT and TabTransformer) and 4 times for each network
-            python train.py --config "$config" --model_name "$model" --dataset "$network" --num_features "$num_features" --n_trials $N_TRIALS --epochs $EPOCHS --optimize_hyperparameters
+            python train.py --config "$config" --model_name "$model" --dataset "$network" --num_features "$num_features" --n_trials $N_TRIALS --epochs $EPOCHS --optimize_hyperparameters --use_gpu
         done
     done
 done

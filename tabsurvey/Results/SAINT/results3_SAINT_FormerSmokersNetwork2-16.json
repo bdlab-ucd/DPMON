@@ -1,0 +1,1002 @@
+[
+    {
+        "results": {
+            "Log Loss - mean": 1.4698935813224827,
+            "Log Loss - std": 0.00925371889976431,
+            "AUC - mean": 0.5324362984065604,
+            "AUC - std": 0.004287457792635382,
+            "Accuracy - mean": 0.5004694835680751,
+            "Accuracy - std": 0.0006639500292831424,
+            "F1 score - mean": 0.33448311961374627,
+            "F1 score - std": 0.0008232648672729631
+        },
+        "train_time": 1081.2360747780003,
+        "inference_time": 12.313020593999681,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.4712300749538463,
+            "Log Loss - std": 0.014447208460562832,
+            "AUC - mean": 0.5311925394903153,
+            "AUC - std": 0.016214202756835328,
+            "Accuracy - mean": 0.5014111031537625,
+            "Accuracy - std": 0.001153245283523595,
+            "F1 score - mean": 0.3349031905066093,
+            "F1 score - std": 0.0012833115651727665
+        },
+        "train_time": 1077.4075066060002,
+        "inference_time": 12.21919394399932,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.4722130167907543,
+            "Log Loss - std": 0.012862885858004703,
+            "AUC - mean": 0.525253820661962,
+            "AUC - std": 0.007932416354631818,
+            "Accuracy - mean": 0.5004694835680751,
+            "Accuracy - std": 0.002400148809196117,
+            "F1 score - mean": 0.3367416684416069,
+            "F1 score - std": 0.0016231436350245554
+        },
+        "train_time": 1081.165583089667,
+        "inference_time": 12.152419794666761,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.4680477971810495,
+            "Log Loss - std": 0.0037794341273761772,
+            "AUC - mean": 0.525432086176044,
+            "AUC - std": 0.008116604751117855,
+            "Accuracy - mean": 0.5004694835680751,
+            "Accuracy - std": 0.0006639500292831424,
+            "F1 score - mean": 0.33448311961374627,
+            "F1 score - std": 0.0008232648672729631
+        },
+        "train_time": 1080.4758495943327,
+        "inference_time": 12.148928227667056,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.4690797329293297,
+            "Log Loss - std": 0.005022690256425662,
+            "AUC - mean": 0.5286015145139101,
+            "AUC - std": 0.012552609437602967,
+            "Accuracy - mean": 0.5014111031537625,
+            "Accuracy - std": 0.001153245283523595,
+            "F1 score - mean": 0.3349031905066093,
+            "F1 score - std": 0.0012833115651727665
+        },
+        "train_time": 1079.7677993963334,
+        "inference_time": 12.453432362332629,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.4833005965433042,
+            "Log Loss - std": 0.014983818558809347,
+            "AUC - mean": 0.5259294389815571,
+            "AUC - std": 0.014467910747687895,
+            "Accuracy - mean": 0.4703535715233018,
+            "Accuracy - std": 0.03161045515685857,
+            "F1 score - mean": 0.34038872766311196,
+            "F1 score - std": 0.005980914127317433
+        },
+        "train_time": 1081.7626875150006,
+        "inference_time": 12.30891494966636,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.4731461599526723,
+            "Log Loss - std": 0.006329194165478211,
+            "AUC - mean": 0.5363914559732956,
+            "AUC - std": 0.004229514651439261,
+            "Accuracy - mean": 0.5032943423251371,
+            "Accuracy - std": 0.0017630271606353396,
+            "F1 score - mean": 0.33900398445178564,
+            "F1 score - std": 0.004733348598293962
+        },
+        "train_time": 1080.3522284506664,
+        "inference_time": 11.998566112666595,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.473384641450039,
+            "Log Loss - std": 0.00564348139011959,
+            "AUC - mean": 0.525954711679718,
+            "AUC - std": 0.012583664737183673,
+            "Accuracy - mean": 0.5014111031537625,
+            "Accuracy - std": 0.001153245283523595,
+            "F1 score - mean": 0.3349031905066093,
+            "F1 score - std": 0.0012833115651727665
+        },
+        "train_time": 1079.6726480640002,
+        "inference_time": 12.18988794799831,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.4622163297477357,
+            "Log Loss - std": 0.009530874523219617,
+            "AUC - mean": 0.5318167164067908,
+            "AUC - std": 0.0074154834845645955,
+            "Accuracy - mean": 0.5014111031537625,
+            "Accuracy - std": 0.001153245283523595,
+            "F1 score - mean": 0.33652061300359765,
+            "F1 score - std": 0.002072476725296561
+        },
+        "train_time": 1078.7448312166682,
+        "inference_time": 12.196067497000817,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.4734692596562924,
+            "Log Loss - std": 0.006322848594279536,
+            "AUC - mean": 0.5250484257171222,
+            "AUC - std": 0.01445595197867572,
+            "Accuracy - mean": 0.4957613856396382,
+            "Accuracy - std": 0.01112080646293578,
+            "F1 score - mean": 0.3401037700547073,
+            "F1 score - std": 0.004389178847502532
+        },
+        "train_time": 1081.3252084699998,
+        "inference_time": 12.112745121667103,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.4602496047834024,
+            "Log Loss - std": 0.023695919385295562,
+            "AUC - mean": 0.5302646281745146,
+            "AUC - std": 0.01116092170399571,
+            "Accuracy - mean": 0.5014111031537625,
+            "Accuracy - std": 0.001153245283523595,
+            "F1 score - mean": 0.3349031905066093,
+            "F1 score - std": 0.0012833115651727665
+        },
+        "train_time": 1080.6240772536669,
+        "inference_time": 12.136374753000078,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.4646724596876466,
+            "Log Loss - std": 0.0072406642822511295,
+            "AUC - mean": 0.5318315236080992,
+            "AUC - std": 0.006669568024098904,
+            "Accuracy - mean": 0.49858624439670035,
+            "Accuracy - std": 0.0030499686696780046,
+            "F1 score - mean": 0.3351885153738971,
+            "F1 score - std": 0.001645503119922077
+        },
+        "train_time": 1083.2661774249984,
+        "inference_time": 12.235107243667395,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.4733367833634874,
+            "Log Loss - std": 0.005422973058872546,
+            "AUC - mean": 0.5353876681206998,
+            "AUC - std": 0.009214697233506913,
+            "Accuracy - mean": 0.4938781464682635,
+            "Accuracy - std": 0.011665350633706117,
+            "F1 score - mean": 0.3405996985132012,
+            "F1 score - std": 0.000806714654572559
+        },
+        "train_time": 1084.022156941668,
+        "inference_time": 12.131457812334702,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.4664436729503407,
+            "Log Loss - std": 0.00527678657215827,
+            "AUC - mean": 0.525171781165591,
+            "AUC - std": 0.009901355543124742,
+            "Accuracy - mean": 0.5014111031537625,
+            "Accuracy - std": 0.001153245283523595,
+            "F1 score - mean": 0.3349031905066093,
+            "F1 score - std": 0.0012833115651727665
+        },
+        "train_time": 1080.0125828963355,
+        "inference_time": 12.073396909334406,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.4708360115520052,
+            "Log Loss - std": 0.020313881948381223,
+            "AUC - mean": 0.5318100557172625,
+            "AUC - std": 0.012623401457524584,
+            "Accuracy - mean": 0.5014111031537625,
+            "Accuracy - std": 0.001153245283523595,
+            "F1 score - mean": 0.3349031905066093,
+            "F1 score - std": 0.0012833115651727665
+        },
+        "train_time": 1080.4456338053326,
+        "inference_time": 12.253167183664724,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.46829126017046,
+            "Log Loss - std": 0.009784158104725021,
+            "AUC - mean": 0.5298857843098523,
+            "AUC - std": 0.008582933059818791,
+            "Accuracy - mean": 0.5014111031537625,
+            "Accuracy - std": 0.001153245283523595,
+            "F1 score - mean": 0.3349031905066093,
+            "F1 score - std": 0.0012833115651727665
+        },
+        "train_time": 1080.0902338916665,
+        "inference_time": 12.224117024665853,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.456991567587756,
+            "Log Loss - std": 0.005877450046363576,
+            "AUC - mean": 0.5338535990329611,
+            "AUC - std": 0.01006115406632294,
+            "Accuracy - mean": 0.5014111031537625,
+            "Accuracy - std": 0.001153245283523595,
+            "F1 score - mean": 0.3349031905066093,
+            "F1 score - std": 0.0012833115651727665
+        },
+        "train_time": 1081.990236865,
+        "inference_time": 12.221497708000243,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.4616364688256767,
+            "Log Loss - std": 0.008302699429472966,
+            "AUC - mean": 0.5264291465493303,
+            "AUC - std": 0.0158221457555289,
+            "Accuracy - mean": 0.5014111031537625,
+            "Accuracy - std": 0.001153245283523595,
+            "F1 score - mean": 0.3349031905066093,
+            "F1 score - std": 0.0012833115651727665
+        },
+        "train_time": 1079.3422052516664,
+        "inference_time": 12.389892780998101,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.473766856530976,
+            "Log Loss - std": 0.00817498434318772,
+            "AUC - mean": 0.5239695617866292,
+            "AUC - std": 0.006271121481611264,
+            "Accuracy - mean": 0.49577995278639825,
+            "Accuracy - std": 0.009963001569356096,
+            "F1 score - mean": 0.3361500943174098,
+            "F1 score - std": 0.0033370131491965624
+        },
+        "train_time": 1082.9890529353288,
+        "inference_time": 12.103341707336464,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.4587569791290995,
+            "Log Loss - std": 0.00626280730702617,
+            "AUC - mean": 0.5246206189471488,
+            "AUC - std": 0.0021089220437636763,
+            "Accuracy - mean": 0.5014111031537625,
+            "Accuracy - std": 0.001153245283523595,
+            "F1 score - mean": 0.3349031905066093,
+            "F1 score - std": 0.0012833115651727665
+        },
+        "train_time": 1081.3849761436675,
+        "inference_time": 12.28953961133569,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.482745553397698,
+            "Log Loss - std": 0.00803711892229643,
+            "AUC - mean": 0.5369960909910115,
+            "AUC - std": 0.007209585844811029,
+            "Accuracy - mean": 0.500466831118538,
+            "Accuracy - std": 0.0028971039328808037,
+            "F1 score - mean": 0.34159637128579873,
+            "F1 score - std": 0.006847478043585991
+        },
+        "train_time": 1082.794162097004,
+        "inference_time": 12.221907530668735,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.4735207748921961,
+            "Log Loss - std": 0.010493517377031308,
+            "AUC - mean": 0.5351480210079216,
+            "AUC - std": 0.0065444682324771655,
+            "Accuracy - mean": 0.4967162674730113,
+            "Accuracy - std": 0.006740759931338222,
+            "F1 score - mean": 0.33965775158306205,
+            "F1 score - std": 0.006842737044213681
+        },
+        "train_time": 1082.656308161667,
+        "inference_time": 12.22130040533375,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.4782221672833529,
+            "Log Loss - std": 0.015385397389987152,
+            "AUC - mean": 0.524702842696407,
+            "AUC - std": 0.008689996127187538,
+            "Accuracy - mean": 0.49481976605395084,
+            "Accuracy - std": 0.008341723125019546,
+            "F1 score - mean": 0.3348725876207841,
+            "F1 score - std": 0.001245972941157284
+        },
+        "train_time": 1082.307765772668,
+        "inference_time": 12.181336503999773,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.4624489479369427,
+            "Log Loss - std": 0.01158244336224876,
+            "AUC - mean": 0.5247623048985427,
+            "AUC - std": 0.0005598964592915346,
+            "Accuracy - mean": 0.5014111031537625,
+            "Accuracy - std": 0.001153245283523595,
+            "F1 score - mean": 0.3349031905066093,
+            "F1 score - std": 0.0012833115651727665
+        },
+        "train_time": 1083.5390847123344,
+        "inference_time": 12.243721613335461,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.469852068955244,
+            "Log Loss - std": 0.014140600455565729,
+            "AUC - mean": 0.532672411452973,
+            "AUC - std": 0.00923042683002431,
+            "Accuracy - mean": 0.5004694835680751,
+            "Accuracy - std": 0.002400148809196117,
+            "F1 score - mean": 0.3420358869416969,
+            "F1 score - std": 0.009000165338296996
+        },
+        "train_time": 1082.4789810653358,
+        "inference_time": 12.250111371002276,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.4658457996071015,
+            "Log Loss - std": 0.008551250035618805,
+            "AUC - mean": 0.5212862695216159,
+            "AUC - std": 0.004830227538643749,
+            "Accuracy - mean": 0.5014111031537625,
+            "Accuracy - std": 0.001153245283523595,
+            "F1 score - mean": 0.3349031905066093,
+            "F1 score - std": 0.0012833115651727665
+        },
+        "train_time": 1082.6286901626638,
+        "inference_time": 12.132693716334567,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.476440731138193,
+            "Log Loss - std": 0.006499952614230342,
+            "AUC - mean": 0.5228005192374118,
+            "AUC - std": 0.0028257511203162314,
+            "Accuracy - mean": 0.49952786398238774,
+            "Accuracy - std": 0.001760191573494502,
+            "F1 score - mean": 0.3340614635477026,
+            "F1 score - std": 0.0006440675403140579
+        },
+        "train_time": 1081.9074220743303,
+        "inference_time": 12.216608265327523,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.469655888270032,
+            "Log Loss - std": 0.00876474266156579,
+            "AUC - mean": 0.5358932113845017,
+            "AUC - std": 0.012916051054670027,
+            "Accuracy - mean": 0.5004694835680751,
+            "Accuracy - std": 0.0006639500292831424,
+            "F1 score - mean": 0.33490359125263813,
+            "F1 score - std": 0.0007702853513885259
+        },
+        "train_time": 1083.2928016346705,
+        "inference_time": 12.132850367333353,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.4626082614886726,
+            "Log Loss - std": 0.010550608531284228,
+            "AUC - mean": 0.5301483083844684,
+            "AUC - std": 0.01659567058771777,
+            "Accuracy - mean": 0.5014111031537625,
+            "Accuracy - std": 0.001153245283523595,
+            "F1 score - mean": 0.3349031905066093,
+            "F1 score - std": 0.0012833115651727665
+        },
+        "train_time": 1082.9054449099979,
+        "inference_time": 12.140628495331233,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.465670477954516,
+            "Log Loss - std": 0.006831343974092117,
+            "AUC - mean": 0.5216279196975847,
+            "AUC - std": 0.008450982933535453,
+            "Accuracy - mean": 0.5014111031537625,
+            "Accuracy - std": 0.001153245283523595,
+            "F1 score - mean": 0.3349031905066093,
+            "F1 score - std": 0.0012833115651727665
+        },
+        "train_time": 1080.399267423995,
+        "inference_time": 12.288030086332583,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.4902352067535378,
+            "Log Loss - std": 0.013593553552499379,
+            "AUC - mean": 0.5243636412091593,
+            "AUC - std": 0.007497087881339878,
+            "Accuracy - mean": 0.5004694835680751,
+            "Accuracy - std": 0.0006639500292831424,
+            "F1 score - mean": 0.339385669152906,
+            "F1 score - std": 0.007268420677334108
+        },
+        "train_time": 1081.8844355743302,
+        "inference_time": 12.148547643994485,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.4655486401741147,
+            "Log Loss - std": 0.015088439342255512,
+            "AUC - mean": 0.5256376847786312,
+            "AUC - std": 0.0013849113812644581,
+            "Accuracy - mean": 0.49858624439670035,
+            "Accuracy - std": 0.0030499686696780046,
+            "F1 score - mean": 0.3351885153738971,
+            "F1 score - std": 0.001645503119922077
+        },
+        "train_time": 1084.3073208039957,
+        "inference_time": 12.217986042999351,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.475643450875708,
+            "Log Loss - std": 0.009817059477371872,
+            "AUC - mean": 0.5293673516966061,
+            "AUC - std": 0.004881863045729664,
+            "Accuracy - mean": 0.5023527227394499,
+            "Accuracy - std": 0.0006677011593921023,
+            "F1 score - mean": 0.33711234753458025,
+            "F1 score - std": 0.002114595967854442
+        },
+        "train_time": 1082.1234238670004,
+        "inference_time": 11.872357661666078,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.4792046298256842,
+            "Log Loss - std": 0.012813028854268582,
+            "AUC - mean": 0.529247088439831,
+            "AUC - std": 0.012144241541664397,
+            "Accuracy - mean": 0.49105328771120127,
+            "Accuracy - std": 0.013660593578924721,
+            "F1 score - mean": 0.3345657339870502,
+            "F1 score - std": 0.000901444847402411
+        },
+        "train_time": 1084.075159383671,
+        "inference_time": 12.16732747600084,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.4586490090082265,
+            "Log Loss - std": 0.00892958443151262,
+            "AUC - mean": 0.5211201928669011,
+            "AUC - std": 0.006934804444082149,
+            "Accuracy - mean": 0.5014111031537625,
+            "Accuracy - std": 0.001153245283523595,
+            "F1 score - mean": 0.3349031905066093,
+            "F1 score - std": 0.0012833115651727665
+        },
+        "train_time": 1082.3522725059981,
+        "inference_time": 12.151664558337265,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.4566257763212356,
+            "Log Loss - std": 0.0024812488579959335,
+            "AUC - mean": 0.5330485946513784,
+            "AUC - std": 0.012312108260222108,
+            "Accuracy - mean": 0.5004694835680751,
+            "Accuracy - std": 0.0006639500292831424,
+            "F1 score - mean": 0.33448311961374627,
+            "F1 score - std": 0.0008232648672729631
+        },
+        "train_time": 1082.524837377001,
+        "inference_time": 12.199632061669641,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.4635655126252038,
+            "Log Loss - std": 0.01221400594475186,
+            "AUC - mean": 0.5245116121656627,
+            "AUC - std": 0.007025561415807344,
+            "Accuracy - mean": 0.5014111031537625,
+            "Accuracy - std": 0.001153245283523595,
+            "F1 score - mean": 0.3349031905066093,
+            "F1 score - std": 0.0012833115651727665
+        },
+        "train_time": 1080.7612673286687,
+        "inference_time": 12.311576170332652,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.4564432334391266,
+            "Log Loss - std": 0.012129625843673853,
+            "AUC - mean": 0.5240905433341273,
+            "AUC - std": 0.010740866427182532,
+            "Accuracy - mean": 0.5004721360176122,
+            "Accuracy - std": 0.0017601915734945265,
+            "F1 score - mean": 0.3376857037514988,
+            "F1 score - std": 0.004136526221817551
+        },
+        "train_time": 1082.8085341073358,
+        "inference_time": 12.427430234330435,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.4717344226122204,
+            "Log Loss - std": 0.008294101150701083,
+            "AUC - mean": 0.5221250638960984,
+            "AUC - std": 0.0036183527949681083,
+            "Accuracy - mean": 0.4938993660645606,
+            "Accuracy - std": 0.010687479211005883,
+            "F1 score - mean": 0.3383363377534461,
+            "F1 score - std": 0.005019385003278286
+        },
+        "train_time": 1083.7054001546737,
+        "inference_time": 12.226637083673268,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.4623810337563548,
+            "Log Loss - std": 0.010196737738149669,
+            "AUC - mean": 0.5326041869981567,
+            "AUC - std": 0.012022558112309524,
+            "Accuracy - mean": 0.49859420174531177,
+            "Accuracy - std": 0.00414907039606544,
+            "F1 score - mean": 0.3353441979864155,
+            "F1 score - std": 0.001425681322692872
+        },
+        "train_time": 1082.5523766113329,
+        "inference_time": 12.369159020337975,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.4617144594301743,
+            "Log Loss - std": 0.01034080741559636,
+            "AUC - mean": 0.5233982748287335,
+            "AUC - std": 0.005928554873992801,
+            "Accuracy - mean": 0.5014111031537625,
+            "Accuracy - std": 0.001153245283523595,
+            "F1 score - mean": 0.3349031905066093,
+            "F1 score - std": 0.0012833115651727665
+        },
+        "train_time": 1082.7875437740101,
+        "inference_time": 12.256369801674737,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.4818937371522025,
+            "Log Loss - std": 0.03471264030374299,
+            "AUC - mean": 0.5309319564690189,
+            "AUC - std": 0.0014638930113631274,
+            "Accuracy - mean": 0.5051669716983634,
+            "Accuracy - std": 0.005433520702919,
+            "F1 score - mean": 0.3454173273114099,
+            "F1 score - std": 0.014921877925685783
+        },
+        "train_time": 1084.66103319133,
+        "inference_time": 12.195517085667234,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.4628247937749908,
+            "Log Loss - std": 0.00989824407794522,
+            "AUC - mean": 0.5335819224326995,
+            "AUC - std": 0.007587151360337845,
+            "Accuracy - mean": 0.4967030052253256,
+            "Accuracy - std": 0.005687718983656893,
+            "F1 score - mean": 0.3327868940729255,
+            "F1 score - std": 0.0019859315595142928
+        },
+        "train_time": 1081.9502787329936,
+        "inference_time": 12.231896966336839,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.4691998300285205,
+            "Log Loss - std": 0.0057951426760647325,
+            "AUC - mean": 0.5261421395222373,
+            "AUC - std": 0.012269554484976262,
+            "Accuracy - mean": 0.49952786398238774,
+            "Accuracy - std": 0.001760191573494502,
+            "F1 score - mean": 0.33427110715357267,
+            "F1 score - std": 0.0004443289233034351
+        },
+        "train_time": 1081.9932057740127,
+        "inference_time": 12.184469781001098,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.472132148280278,
+            "Log Loss - std": 0.012746936580594217,
+            "AUC - mean": 0.5379393015708621,
+            "AUC - std": 0.013248391067935067,
+            "Accuracy - mean": 0.49764462481101296,
+            "Accuracy - std": 0.006350785135149514,
+            "F1 score - mean": 0.3378942940986698,
+            "F1 score - std": 0.002120295999251689
+        },
+        "train_time": 1081.5701906650017,
+        "inference_time": 12.258361338987015,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.464224343098157,
+            "Log Loss - std": 0.0005334992146343873,
+            "AUC - mean": 0.5246120380133764,
+            "AUC - std": 0.0021371541377535382,
+            "Accuracy - mean": 0.5032943423251374,
+            "Accuracy - std": 0.0017630271606353396,
+            "F1 score - mean": 0.34055520294429026,
+            "F1 score - std": 0.00509296112178064
+        },
+        "train_time": 1082.744889679326,
+        "inference_time": 12.200793701340444,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.4572438772450838,
+            "Log Loss - std": 0.007135017042679284,
+            "AUC - mean": 0.5285539053675402,
+            "AUC - std": 0.004605317453040002,
+            "Accuracy - mean": 0.5004694835680751,
+            "Accuracy - std": 0.0006639500292831424,
+            "F1 score - mean": 0.33469295636374824,
+            "F1 score - std": 0.0009698206306881208
+        },
+        "train_time": 1082.9133784989924,
+        "inference_time": 12.236864501668606,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.4787743731457332,
+            "Log Loss - std": 0.01273521414359531,
+            "AUC - mean": 0.532967714278679,
+            "AUC - std": 0.017141827481003038,
+            "Accuracy - mean": 0.4938781464682634,
+            "Accuracy - std": 0.011665350633706115,
+            "F1 score - mean": 0.3340414907028242,
+            "F1 score - std": 0.0024160780023331535
+        },
+        "train_time": 1083.2272778896634,
+        "inference_time": 12.221723922664145,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.4708371854966735,
+            "Log Loss - std": 0.008367116154380226,
+            "AUC - mean": 0.5253150159903486,
+            "AUC - std": 0.0039962673878999825,
+            "Accuracy - mean": 0.5014111031537625,
+            "Accuracy - std": 0.001153245283523595,
+            "F1 score - mean": 0.3349031905066093,
+            "F1 score - std": 0.0012833115651727665
+        },
+        "train_time": 1083.5510853980086,
+        "inference_time": 12.069819174668131,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    },
+    {
+        "results": {
+            "Log Loss - mean": 1.457881250572253,
+            "Log Loss - std": 0.011022496136537144,
+            "AUC - mean": 0.5258533230644854,
+            "AUC - std": 0.0024329600542112983,
+            "Accuracy - mean": 0.5014111031537625,
+            "Accuracy - std": 0.001153245283523595,
+            "F1 score - mean": 0.3349031905066093,
+            "F1 score - std": 0.0012833115651727665
+        },
+        "train_time": 1083.6396488419948,
+        "inference_time": 12.230043435003608,
+        "model_params": {
+            "dim": 256,
+            "depth": 3,
+            "heads": 8,
+            "dropout": 0
+        }
+    }
+]

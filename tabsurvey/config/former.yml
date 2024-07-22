@@ -17,7 +17,7 @@ n_trials: 2
 direction: maximize
 
 # Cross validation parameters
-num_splits: 3
+num_splits: 10
 shuffle: True
 seed: 221 # Don't change
 

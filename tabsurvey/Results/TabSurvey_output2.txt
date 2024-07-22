@@ -1,0 +1,25 @@
+Results for: results2_SAINT_CurrentSmokersNetwork3-16.json
+
+Accuracy avg: 0.48177516629711736 - Std: 0.0024788212822651184
+F1-Score: 0.313306714380675 - Std:0.0027144109957770047
+
+Results for: results3_SAINT_CurrentSmokersNetwork2-35.json
+
+Accuracy avg: 0.48169992609017 - Std: 0.0025681558812380347
+F1-Score: 0.31328507054311977 - Std:0.0026980359759885397
+
+Results for: results3_SAINT_FormerSmokersNetwork2-16.json
+
+Accuracy avg: 0.49924670433145013 - Std: 0.0037479378091717598
+F1-Score: 0.33631424961410106 - Std:0.0025450912955808625
+
+Results for: results3_SAINT_FormerSmokersNetwork3-24.json
+
+Accuracy avg: 0.4970885122410546 - Std: 0.005348674998445828
+F1-Score: 0.3355072193210049 - Std:0.003528709476462269
+
+Results for: results3_SAINT_FormerSmokersNetwork4-24.json
+
+Accuracy avg: 0.5014111031537625 - Std: 0.001153245283523595
+F1-Score: 0.33490319050660927 - Std:0.0012833115651727667
+

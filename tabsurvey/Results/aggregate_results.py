@@ -29,7 +29,7 @@ import sys
 if __name__ == "__main__":
 
 
-    sys.stdout = open('/home/vicente/BDLab/NetCo/BioInformedSubjectRepresentation/tabsurvey/Results/TabSurvey_output.txt', 'w')
+    sys.stdout = open('/home/vicente/BDLab/NetCo/BioInformedSubjectRepresentation/tabsurvey/Results/TabSurvey_output2.txt', 'w')
 
     results_Tab = [
         "results_TabTransformer_CurrentSmokersNetwork1-98.json",
@@ -44,10 +44,11 @@ if __name__ == "__main__":
     ]
 
     results_Saint = [
-        "results_SAINT_CurrentSmokersNetwork1-98.json",
-        "results_SAINT_CurrentSmokersNetwork4-12.json",
-        "results_SAINT_CurrentSmokersNetwork5-12.json",
-        "results_SAINT_FormerSmokersNetwork1-88.json",
+        "results2_SAINT_CurrentSmokersNetwork3-16.json",
+        "results3_SAINT_CurrentSmokersNetwork2-35.json",
+        "results3_SAINT_FormerSmokersNetwork2-16.json",
+        "results3_SAINT_FormerSmokersNetwork3-24.json",
+        "results3_SAINT_FormerSmokersNetwork4-24.json",
     ]
     
     path = '/home/vicente/BDLab/NetCo/BioInformedSubjectRepresentation/tabsurvey/Results/'
