@@ -7,7 +7,7 @@ from sklearn.metrics import classification_report, accuracy_score, f1_score
 from sklearn.model_selection import GridSearchCV
 from sklearn.ensemble import RandomForestClassifier
 
-sys.stdout = open('/home/vicente/BDLab/NetCo/BioInformedSubjectRepresentation/model_output.txt', 'w')
+sys.stdout = open('/home/vicente/BDLab/NetCo/BioInformedSubjectRepresentation/model_output2.txt', 'w')
 
 CurrentSmokers_Networks = [
     "CurrentSmokersNetwork1-98",
@@ -41,11 +41,11 @@ for network, cols in network_columns.items():
 # Target class stored in the gold csv file which is a single column
 target_class = pd.read_csv(f"{path}current_smokers_gold.csv")
 
-for index, row in target_class.iterrows():
-    if row["finalgold_visit"] == 1 or row["finalgold_visit"] == 2:
-        target_class.loc[index, "finalgold_visit"] = 1
-    elif row["finalgold_visit"] == 3 or row["finalgold_visit"] == 4:
-        target_class.loc[index, "finalgold_visit"] = 2
+# for index, row in target_class.iterrows():
+#     if row["finalgold_visit"] == 1 or row["finalgold_visit"] == 2:
+#         target_class.loc[index, "finalgold_visit"] = 1
+#     elif row["finalgold_visit"] == 3 or row["finalgold_visit"] == 4:
+#         target_class.loc[index, "finalgold_visit"] = 2
 
 
 y = target_class['finalgold_visit'].values
@@ -139,11 +139,11 @@ for network, cols in former_smoker_network.items():
 # Target class stored in the gold csv file which is a single column
 former_smokers_target = pd.read_csv(f"{former_path}former_smokers_gold.csv")
 
-for index, row in former_smokers_target.iterrows():
-    if row["finalgold_visit"] == 1 or row["finalgold_visit"] == 2:
-        target_class.loc[index, "finalgold_visit"] = 1
-    elif row["finalgold_visit"] == 3 or row["finalgold_visit"] == 4:
-        target_class.loc[index, "finalgold_visit"] = 2
+# for index, row in former_smokers_target.iterrows():
+#     if row["finalgold_visit"] == 1 or row["finalgold_visit"] == 2:
+#         target_class.loc[index, "finalgold_visit"] = 1
+#     elif row["finalgold_visit"] == 3 or row["finalgold_visit"] == 4:
+#         target_class.loc[index, "finalgold_visit"] = 2
 
 y = former_smokers_target['finalgold_visit'].values
 
@@ -230,76 +230,6 @@ for key, value in all_results_current_reg.items():
 
     print("Logistic Regression for Current Smokers")
     print(f"For Netkwork: {key}\nAccuracy avg: {total_accuracy} - Std: {std_acc}\nF1-Score: {total_f1score} - Std:{std_f1}\n")
-import sklearn.datasets
-from sklearn.preprocessing import StandardScaler, LabelEncoder, OneHotEncoder
-
-import numpy as np
-import pandas as pd
-import os
-import re
-
-
-def load_data(args):
-    dataset_dir = args.dataset_dir
-    # Define maximum number of features (this could also be determined dynamically)
-
-    if dataset_dir is None:
-        raise ValueError('No Dataset Directory Specified!')
-
-    omics_dataset_name = ''
-    phenotype_file_name = ''
-    for _, _, files in os.walk(dataset_dir):
-        for file in files:
-            if re.compile('.*omics_data\.csv').match(file):
-                omics_dataset_name = file
-            elif re.compile('.*gold\.csv').match(file):
-                phenotype_file_name = file
-    if omics_dataset_name == '' or phenotype_file_name == '':
-        raise FileNotFoundError
-
-    omics_dataset = pd.read_csv(os.path.join(dataset_dir, omics_dataset_name))
-    phenotype = pd.read_csv(os.path.join(dataset_dir,
-                                         phenotype_file_name))
-    omics_dataset_complete = omics_dataset.merge(phenotype, how='left', left_index=True, right_index=True)
-    # Combining Classes for Less Severity in Balancing Classes
-    omics_dataset_complete['finalgold_visit'] = np.where(omics_dataset_complete['finalgold_visit'] == 2, 1,
-                                                         omics_dataset_complete['finalgold_visit'])
-    omics_dataset_complete['finalgold_visit'] = np.where(omics_dataset_complete['finalgold_visit'] == 3, 2,
-                                                         omics_dataset_complete['finalgold_visit'])
-    omics_dataset_complete['finalgold_visit'] = np.where(omics_dataset_complete['finalgold_visit'] == 4, 2,
-                                                         omics_dataset_complete['finalgold_visit'])
-    # Replacing PRISM (-1) with 5 for Prediction to Work!
-    omics_dataset_complete['finalgold_visit'] = np.where(omics_dataset_complete['finalgold_visit'] == -1, 3,
-                                                         omics_dataset_complete['finalgold_visit'])
-
-    dataset_dir = args.dataset_dir
-    omics_networks_l = []
-    omics_datasets = []
-    for dir_name, _, files in os.walk(dataset_dir):
-        for file in files:
-            if re.compile('.*Network\d+-\d+\.csv').match(file):
-                omics_networks_l.append(os.path.join(dir_name, file))
-
-    if not omics_networks_l:
-        raise FileNotFoundError
-
-    # After loading each dataset:
-    for omics_network_f in omics_networks_l:
-        omics_network_adj = pd.read_csv(omics_network_f, index_col=0)
-        omics_network_nodes_names = omics_network_adj.index.tolist()
-        dataset = omics_dataset_complete[omics_network_nodes_names + ['finalgold_visit']]
-
-        # Padding features if fewer than max_features
-        num_features = dataset.shape[1] - 1  # exclude label column
-        if num_features < max_features:
-            # Create a DataFrame of zeros
-            padding = pd.DataFrame(0, index=np.arange(len(dataset)), columns=np.arange(max_features - num_features))
-            dataset = pd.concat([dataset.drop(['finalgold_visit'], axis=1), padding, dataset['finalgold_visit']], axis=1)
-
-        omics_datasets.append(dataset)
-
-    return omics_datasets
-
 
 
 #1000
