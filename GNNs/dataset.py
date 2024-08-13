@@ -12,7 +12,6 @@ from collections import Counter
 from random import shuffle
 import json
 
-#
 from networkx.readwrite import json_graph
 from argparse import ArgumentParser
 import matplotlib.pyplot as plt
@@ -24,7 +23,6 @@ import pickle
 import os.path
 from torch_geometric.data import Data
 from utils import precompute_dist_data
-
 
 ## adjust path to work indepently
 DATASET_DIR = (

@@ -45,24 +45,22 @@ def train(config, args, datasets_name):
             result_test = []
             start_time = time.time()
 
-            # TODO: Review which args do we use in this function and if any of it is part of the tunable parameters
             dataset = get_tg_dataset(args, dataset_name, use_cache=args.cache)
             dataset_load_time = time.time() - start_time
             print(dataset_name, "load time", dataset_load_time)
 
             print("Dataset %s" % dataset)
 
-            # TODO: Need to understand how they select the anchor_set
+            # Understading how they select the anchor_set
             # preselect_anchor(data, layer_num=config['layer_num'], anchor_num=config['anchor_num'], device='cpu')
 
-            # TODO: Need to review default params of RandomNodeSplit()
             transform = RandomNodeSplit(num_val=3, num_test=5)
             data = transform(dataset)
-            # print("DAATAAAAAA %s" % data)
             dataloader = DataLoader([data], batch_size=1, shuffle=True)
-            # data = data.to(device) # TODO: Need to Figure out how to send data to GPU with dataloader
+            # Figuring out how to send data to GPU with dataloader
+            # data = data.to(device)
 
-            # model
+            # Model
             num_features = dataset.x.shape[1]
             input_dim = num_features
             edge_weight_dim = dataset.edge_attr.shape[0]
@@ -103,7 +101,7 @@ def train(config, args, datasets_name):
             # model = GIN(input_dim=input_dim, hidden_dim=config['hidden_dim'], output_dim=output_dim,
             #              layer_num=config['layer_num'], dropout=args.dropout, hidden_dim_name=dataset_name).to(device)
 
-            # loss
+            # Loss
             # optimizer = torch.optim.Adam(model.parameters(), lr=config['lr'], weight_decay=5e-4)
             optimizer = torch.optim.Adam(
                 model.parameters(), lr=config["lr"], weight_decay=config["weight_decay"]
@@ -228,7 +226,6 @@ def train(config, args, datasets_name):
         print("-----------------Final-------------------")
         print(results)
 
-        # # TODO: Integrate GNN Explainer Better!!
         # ######################### GNN Explainer ####################33
         # explainer = Explainer(
         #     model=model,
@@ -257,7 +254,6 @@ def train(config, args, datasets_name):
 
 
 def main():
-    # TODO: What Do we Store in this Directory?
     if not os.path.isdir("results"):
         os.mkdir("results")
 
@@ -280,7 +276,7 @@ def main():
     else:
         datasets_name = [args.dataset]
 
-    # TODO: Review the Hyperparameter Tuning
+    # Hyperparameter Tuning
     if args.tune:
         for dataset_name in datasets_name:
             reporter = CLIReporter(metric_columns=["loss"])
@@ -290,7 +286,7 @@ def main():
                 metric="loss", mode="min", grace_period=GRACE_PERIOD, reduction_factor=2
             )
 
-            # TODO: Remove this higher limit on the number of trials
+            # Limit on the number of trials
             # NUM_SAMPLES = 5000
             NUM_SAMPLES = 1000
             result = tune.run(
