@@ -1,6 +1,5 @@
 from argparse import ArgumentParser
 
-
 def make_args():
     parser = ArgumentParser()
     parser.add_argument(
@@ -30,8 +29,7 @@ def make_args():
     )
     parser.add_argument("--cuda", dest="cuda", default="0", type=str)
 
-    # dataset
-    # TODO: Might Need to Enable after Investigation
+    # Dataset Notes: Enable after Investigation
     # parser.add_argument('--feature_pre', dest='feature_pre', action='store_true',
     #                     help='whether pre transform feature')
     # parser.add_argument('--feature_pre_no', dest='feature_pre', action='store_false',
